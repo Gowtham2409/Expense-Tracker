@@ -17,7 +17,7 @@ mongoose.connect(MONGO_URL, {
     .catch(err => console.error('❌ MongoDB connection error:', err));
 
 app.use(express.json());
-app.use(cors({ origin: 'http://localhost:5173' }));
+app.use(cors());
 
 const transactionSchema = new mongoose.Schema({
     title: String,
