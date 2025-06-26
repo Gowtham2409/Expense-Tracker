@@ -26,7 +26,7 @@ export default function ExpenseTracker() {
     const [activeTab, setActiveTab] = useState("expense");
 
     useEffect(() => {
-        axios.get("http://localhost:4200/transactions")
+        axios.get("https://expense-tracker-r6bn.onrender.com/transactions")
             .then(res => setTransactions(res.data))
             .catch(err => console.error("Error fetching transactions:", err));
     }, []);
@@ -37,7 +37,7 @@ export default function ExpenseTracker() {
             title,
             amount: parseFloat(amount),
         };
-        axios.post("http://localhost:4200/transactions", newTransaction)
+        axios.post("https://expense-tracker-r6bn.onrender.com/transactions", newTransaction)
             .then(res => {
                 setTransactions([...transactions, res.data]);
                 setTitle("");
@@ -46,7 +46,7 @@ export default function ExpenseTracker() {
     };
 
     const handleDelete = (id) => {
-        axios.delete(`http://localhost:4200/transactions/${id}`)
+        axios.delete(`https://expense-tracker-r6bn.onrender.com/transactions/${id}`)
             .then(() => setTransactions(transactions.filter(t => t._id !== id)));
     };
 
