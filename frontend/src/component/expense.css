@@ -1,0 +1,243 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0f0f0f;
+    color: #fff;
+}
+
+/* Layout */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 180px;
+    background-color: #141414;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-right: 1px solid #222;
+}
+
+.logo {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.sidebar button {
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.sidebar button.active,
+.sidebar button:hover {
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 40px 50px;
+    overflow-y: auto;
+}
+
+/* Expense Tab */
+.expense-tab h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.expense-tab label {
+    font-size: 16px;
+    margin-top: 20px;
+    display: block;
+}
+
+.expense-tab input {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 8px;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.expense-tab button {
+    width: 100%;
+    padding: 14px;
+    background-color: #6558f5;
+    color: white;
+    font-size: 16px;
+    border: none;
+    margin-top: 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.expense-tab button:hover {
+    background-color: #5243e0;
+}
+
+.expense-tab h3 {
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+/* Shared history item card */
+.history-item {
+    background-color: #1c1c1c;
+    border-left: 5px solid #6558f5;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding: 14px 20px;
+    transition: background 0.2s;
+}
+
+.history-item:hover {
+    background-color: #262626;
+}
+
+.history-item span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Amount style */
+.pos {
+    color: #00e676;
+    font-weight: bold;
+}
+
+.neg {
+    color: #ff5252;
+    font-weight: bold;
+}
+
+.btn-his {
+    background: none;
+    border: none;
+    color: #6558f5;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s;
+    display: none;
+}
+
+/* Delete button */
+
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.delete-btn:hover {
+    color: #ff1744;
+}
+
+/* History tab */
+.history-tab h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* Stats Tab */
+.stats-tab .summary-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 48px;
+    margin-bottom: 32px;
+}
+
+.summary-cards>div {
+    flex: 1 1 0;
+    background: #232323;
+    border-radius: 18px;
+    padding: 24px 0 20px 0;
+    margin: 0 4px;
+    text-align: center;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.08);
+}
+
+.summary-cards p {
+    color: #ccc;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.summary-cards h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.summary-cards .pos {
+    color: #6fffab;
+}
+
+.summary-cards .neg {
+    color: #ff7a7a;
+}
+
+/* Make summary-cards always row, not just in stats-tab */
+.summary-cards {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: stretch;
+    gap: 32px;
+    margin-bottom: 24px;
+}
+
+/* Chart */
+.chart-box {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* Empty state */
+.empty {
+    color: #aaa;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.history-item:hover .btn-his {
+
+    display: block;
+}
